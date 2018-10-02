@@ -8,11 +8,6 @@ float: none;
 clear: both;
 }
 
-body{
-background: url("../img/hojas.jpg");
-background-attachment: fixed;
-}
-
 #global{
 width: 65%;
 margin: 0px auto;
@@ -27,7 +22,6 @@ box-shadow: 0px 0px 2px gray;
     font-size: 30px;
     letter-spacing: 4px;
     line-height: 80px;
-    background: rgb(19, 139, 103);
     color: white;
     text-align: center;
     width: 385px;
@@ -52,10 +46,6 @@ box-shadow: 0px 0px 2px gray;
 #menu ul li{
     height: 46px;
     display: inline-block;
-}
-
-#menu ul li:hover{
-    background: rgb(19, 139, 103);
 }
 
 #menu a{
@@ -112,12 +102,19 @@ float: right;
 }
 
 #sidebar h4{
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 20PX;
+    margin-bottom: 20PX;
     text-align: center;
+    background: url(../img/lines.png) ;
     line-height: 10px;
-    color: gray;
+}
+
+#sidebar h4 span{
+    padding: 5px;    
+    background: white;
+    line-height: 10px;
     }
+  
 
     #sidebar img{
         width: 100%;
@@ -129,6 +126,7 @@ float: right;
         font-size: 15px;
         text-align: justify;
         float: left;
+        background: white;
     }
 
     form input[type="text"],
@@ -142,11 +140,62 @@ float: right;
         margin-top: 5px;
     }
 
-    form button{
-       
+    form button{       
+       float: left;
         background: gray;
         padding: 10px;
         border: 1px solid black;
         cursor:pointer;
-
     }
+footer{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    height: 47px;
+    background: rgb(51, 51, 51,0.70);
+    margin: 0px auto;
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 47px;
+}
+
+.bx-wrapper,.bx-viewport{
+height: 250px !important;
+}
+
+#selector-theme{
+position: fixed;
+top: 40%;
+background: rgba(51,51,51, 0.5);
+width: 50px;
+height: 100px;
+}
+
+#to-green,#to-red,#to-blue{
+width: 25px;
+height: 25px;
+margin-top: 10px;
+margin-bottom: 5px;
+border: 1px solid gray;
+margin: 5px auto;
+cursor: pointer;
+}
+
+#to-green{
+    background: rgb(19, 139, 103);
+}
+
+#to-red{
+    background: rgb(245, 13, 83);
+}
+
+#to-blue{
+    background: rgb(12, 206, 231);
+}
+
+#subir{
+text-decoration: none;
+float: right;
+color: white;
+}

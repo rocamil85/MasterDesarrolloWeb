@@ -3,11 +3,28 @@
 <HEAD>
     <meta charset="utf-8" />
     <TITLE>Proyecto con js</TITLE>
+
+    <!--jQuery-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+
     <!--Estilos css-->
     <link rel="stylesheet" href="css/styles.css">
+    <link id="theme" rel="stylesheet" href="css/green.css">
+
+    <!--Slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">  
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
 </HEAD>
 
 <body>
+<div id="selector-theme">
+    <div  id="to-green"></div>
+    <div  id="to-red"></div>
+    <div  id="to-blue"></div>
+</div>
+
     <section id="global">
         <!--Cabecera-->
         <header>
@@ -20,56 +37,29 @@
                 <ul>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Reloj</a></li>
-                    <li><a href="#">Sobre me</a></li>
+                    <li><a href="#">Sobre mi</a></li>
                     <li><a href="#">Contacto</a></li>
 
                 </ul>
             </nav>
         </header>
         <!--Slider-->
-        <div id="slider">
-        </div>
+        
+                <div class="slider">
+                        <div><img src="img/cielo.jpg"></div>
+                        <div><img src="img/hojas.jpg"></div>
+                        <div><img src="img/rojo.jpg"></div>
+                      </div>
+        
 
-        <!--Contenido-->
+        <!--Contenido <div class="clearfix"></div>-->
         <section id=content"">
             <div id="posts">
-                <article class="post">
-                    <h2>Título del artículo 1 </h2>
-                    <span class="date">Fecha de publicación</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                        a galley of type and scrambled it to make a type specimen book. It has survived not only
-                        five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                        PageMaker including versions of Lorem Ipsum. </p>
-
-                    <a href="#" class="button-more">Leer</a>
-                </article>
-                <div class="clearfix"></div>
-
-                <article class="post">
-                    <h2>Título del artículo 2 </h2>
-                    <span class="date">Fecha de publicación</span>
-                    <p>Lo que están haciendo esos selectores es aplicar el estilo de visualización in-line-block
-                        (te refiero al post para ver su significado) a los elementos que lleven esas clases
-                        aplicadas, además de flotarlos a la izquierda. Supongo que si los elementos a los que se le
-                        aplica tienen un ancho fijo y están metidos dentro de otro elemento en el que no caben, los
-                        pondrá unos encima de otros al flotarlos y por eso te aparece una columna.
-
-                        Lo que te consejo modestamente es que, si quieres aprender en serio HTML y CSS y comprender
-                        por qué te funcionan estas cosas y aprender a hacerlas lo mejor posible por ti mismo, te
-                        apuntes a mi curso de "Creación Profesional de páginas web con HTML y CSS":
-                        /catalogo/Product-Creaci%C3%B3n-profesional-de-p%C3%A1ginas-web-con-HTML5-y-CSS3_185.aspx
-                    </p>
-
-                    <a href="#" class="button-more">Leer</a>
-                </article>
             </div>
 
             <aside id="sidebar">
                 <div id="about">
-                    <h4>¿Quien soy?</h4>
+                    <h4><span>¿Quien soy?</span></h4>
                     <img src="img/caracol.jpg">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                         been the industry's standard dummy text ever since the 1500s, when an unknown printer took
@@ -77,20 +67,21 @@
                         five centuries, but also the leap into electronic typesetting, remaining essentially
                         unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
                         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                        PageMaker including versions of Lorem Ipsum. </p>
+                        PageMaker including versions of Lorem Ipsum. </p><br>
                 </div>
+                <div class="clearfix"></div>
                 <div>
-                        <h4>Identifícate</h4>
+                    <h4><span>Identifícate</span></h4> 
                     <form>
-                        <label for="name">Nombre</label>
-                        <input type="text">
+                        <label for="name">Nombre</label><br>
+                        <input type="text"><br>
 
-                        <label for="email">Correo</label>
-                        <input type="email">
+                        <label for="email">Correo</label><br>
+                        <input type="email"><br>
 
-                        <label for="password">Contraseña</label>
-                        <input type="password">
-
+                        <label for="password">Contraseña</label><br>
+                        <input type="password"><br>
+                        
                         <button type="submit">Entrar</button>
                     </form>
                 </div>
@@ -102,5 +93,6 @@
     <!--Footer-->
     <footer>
         Master de JavaScript Ronaldo Castro 2018
+        <a href="#" id="subir">Ir arriba</a>
     </footer>
 </body>
