@@ -1,18 +1,101 @@
 <HTML>
 
-    <HEAD>
-        <meta charset="utf-8" />
-        <TITLE>Su título va aquí</TITLE>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-        <script src="js/user interface.js"></script>
-        
-    </HEAD>
-    
-    <body BGCOLOR="FFFFFF">        
-        <h2>Web Services</h2>
-    
-    
-    
-    
-    </body>
+<HEAD>
+    <meta charset="utf-8" />
+    <TITLE>Su título va aquí</TITLE>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+<link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+<link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/user interface.js"></script>
+<style>
+.elemento{
+width: 30 px;
+height: 20px;
+border: 2px solid black;
+background: rgb(122, 226, 122);
+margin: 20px;
+float: left;
+}
+
+.drop{
+width: 250 px;
+height: 200px;
+border: 2px solid black;
+background: yellowgreen;
+margin: 20px;
+float: left;
+}
+
+.efect{
+width: 5 px;
+height: 200px;
+border: 2px solid black;
+background: rgb(245, 93, 101);
+margin: 20px;
+float: left;
+display: none;
+}
+
+.ui-selectee{
+background: green;
+} 
+.ui-selected{
+background: blue;
+} 
+</style>
+</HEAD>
+
+<body BGCOLOR="FFFFFF">
+    <h2>Web Services</h2>
+    <ul class="lista-web">
+        <li>web1</li>
+        <li>web2</li>
+        <li title="ejemeplo de una web">web3</li>
+    </ul>
+
+
+    <div class="elemento">
+        esta es la caja 1
+    </div>
+    <div class="elemento">
+        esta es la caja 2
+    </div>
+    <div class="elemento">
+        esta es la caja 3
+    </div>
+
+
+    <div class="drop">
+        esta es la caja 4
+    </div>
+<br/>
+<button id="button1">Show</button>
+<hr>
+    <div class="efect">
+        esta es la caja 4
+    </div>
+
+    <hr><hr>
+<a href="https://www.udemy.com" title="vinculo a udemy">web</a>
+<input type="text" id="calendar">
+<br>
+<div id="dialog" title="este es mi ejemplo de dialogo">   
+<p><H3>Prueba de dialogo</H3></p>
+</div>
+<H3>Prueba de Pestañas</H3>
+<div id="pestannas">
+    <ul><li><a href="#divweb1"> web1 </a></li>
+        <li><a href="#divweb2"> web2 </a></li>
+        <li><a href="#divweb3"> web3 </a></li>
+    </ul>
+
+    <div id="divweb1">descripcion de la web1</div>
+    <div id="divweb2">descripcion de la web2</div>
+    <div id="divweb3">descripcion de la web3</div>
+
+</div>
+</body>
