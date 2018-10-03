@@ -130,6 +130,7 @@ float: right;
     }
 
     form input[type="text"],
+    form input[type="number"],
     form input[type="password"],
     form input[type="email"]{
         padding: 5px;
@@ -199,3 +200,44 @@ text-decoration: none;
 float: right;
 color: white;
 }
+
+#accordion{
+width: 50%;
+margin-top: 40px;
+float: left;
+}
+
+#reloj{
+width: 30%;
+font-family: fantasy;
+font-size: 30px;
+color: rgb(27, 27, 100);
+border: 2px dashed;
+margin-left: 100px;
+margin-top: 100px;
+float: left;
+}
+
+#contacto{
+width: 500px;
+float: left;
+margin-left: 100px;
+margin-top: 50px;
+}
+
+#input_name,
+#input_lastName,
+#input_edad,
+#input_email{
+    width: 200px;
+}
+
+.form-error{
+    color: white;
+    background: rgb(240, 73, 54);
+    border: 1px solid red;
+    width: 500px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 80px;
+    }

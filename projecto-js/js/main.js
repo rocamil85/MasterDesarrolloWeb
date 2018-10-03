@@ -38,6 +38,7 @@ $(document).ready(function () {
         }
     });
 
+    //cambio de temas
     $("#to-green").click(function (e) {
         e.preventDefault();
         $("#theme").attr("href", "css/green.css");
@@ -58,6 +59,21 @@ $(document).ready(function () {
         $("html, body").animate({ scrollTop: 0 }, 1000);
     });
 
+    $("#form").submit(function (e) { 
+        e.preventDefault();
+        localStorage.setItem("name",$("#input_name").val());
+        
+        $("#caja_login").hide();
+        $("#parrafo").html("Bienvenido: " + localStorage.getItem("name"));    
+        $("#parrafo").append('<br/><a href="" id="logout">Logout</a>');
+    });
+
+     //logout
+    $("#logout").click(function () {
+        console.log("logout");
+        localStorage.clear();
+        location.reload();
+    });
 
 
     //---
