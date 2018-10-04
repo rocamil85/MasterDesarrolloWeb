@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Starting a TypeScript project with Visual Studio Code - Meziantou's blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" async="" src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/analytics.js"></script><script defer="defer" src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/fa.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.meziantou.net/apple-touch-icon.png?v=mtOsEltopcksk1cjZASOV6Rp_m-NDCx2xS6gJ1PrTig">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.meziantou.net/favicon-16x16.png?v=xY5mLIody2mQqYmqpAkXFBI71HF9OO6Gj6lj9YENSkE">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.meziantou.net/favicon-32x32.png?v=iGZ0n4DTYCclWmvAmQGoCB1f_iBQeOmmns76RFR-VL8">
+    <link rel="icon" type="image/x-icon" href="https://www.meziantou.net/favicon.ico?v=-lLPE9gJK_gpy3Y2CH5rYFiBDa-ytlEDLKDQTjUuhNM" sizes="16x16 32x32">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://www.meziantou.net/favicon-48x48.png?v=zqYuDmekYiorJkfJOkCaCk1MioyTA3fZycWE1BtI3Qw">
+    <link rel="manifest" href="https://www.meziantou.net/manifest.webmanifest">
+    <link rel="mask-icon" href="https://www.meziantou.net/safari-pinned-tab.svg?v=qWAzk-I_ayuC7lkdr7Nmg50Ql8oMOE_6BVj0OWiX-_E" color="#5bbad5">
+    <meta name="theme-color" content="#fff">
+    <style rel="stylesheet">*{-webkit-box-sizing:border-box;box-sizing:border-box}video{display:inline-block}html{font-size:62.5%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif}body{background-color:#fff;font-size:1.3rem;line-height:2.3rem;margin:0;word-wrap:break-word}a,body{color:#333}a{text-decoration:none}a:focus{outline:thin dotted}a:active,a:hover{color:#b00}a:hover{-webkit-transition:all .3s;transition:all .3s}h1,h2,h3,h4{clear:both;font-family:sans-serif;font-weight:700;line-height:1.5;margin:2.3rem 0}h1{font-size:2.4rem}h2{font-size:2rem}h3{font-size:1.7rem}h4{font-size:1.5rem}p{margin:0 0 2.3rem}code,kbd,pre{font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1.5rem;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}:not(pre)>code,:not(pre)>kbd{background:rgba(0,0,0,.04);color:#666;padding:0;padding-top:.4rem;padding-bottom:.4rem;margin:0;border-radius:3px}:not(pre)>code:after,:not(pre)>code:before,:not(pre)>kbd:after,:not(pre)>kbd:before{letter-spacing:-.2em;content:"\00a0"}pre,pre[class*=language-]{margin:2.3rem 0!important;background:rgba(0,0,0,.04);color:#666;overflow-x:auto}blockquote{font-size:1.5rem;font-style:italic;font-weight:400;margin:2.3rem;clear:both}blockquote cite{font-size:1.3rem;display:block;margin-left:15px}blockquote cite:before{content:"— "}sup{font-size:75%;line-height:0;vertical-align:super}ol,ul{margin:1.6rem 0;padding:0 0 0 4rem}ul{list-style-type:square}nav ul{list-style:none}li>ul{margin:0}li>p{margin-bottom:0}img{border:0;vertical-align:middle}table{border-spacing:0;margin:0 0 2.3rem;width:100%}td,th{border-bottom:1px solid rgba(0,0,0,.1);text-align:left}th{text-transform:uppercase}td{padding:.6rem 1rem .6rem 0}.site-header{background-color:#000}.home-link{display:block;margin:0 auto;max-width:1140px;min-height:175px;text-align:center;text-decoration:none;width:100%}.site-title{color:#fff;font-family:sans-serif;font-size:8rem;font-weight:300;letter-spacing:5px;line-height:1;margin:0;padding:4rem 0 .5rem;text-transform:uppercase}.site-description{color:#ccc;font-size:14px;font-weight:400;letter-spacing:2px;margin:0;padding-bottom:2.3rem}#navbar{background-color:#404040}.main-navigation{margin:0 auto;max-width:1140px;position:relative}ul.nav-menu{margin:0;padding:0}.nav-menu li{float:left}.nav-menu a{display:block;font-family:sans-serif;font-size:1.1rem;letter-spacing:2px;line-height:1.2rem;padding:1.2rem 2rem;color:#ccc;text-transform:uppercase}.nav-menu a:hover{background-color:#303030;color:#fff}.navigation-right{position:absolute;right:0;top:0}.navigation-right a{padding:1.1rem 2rem;font-size:1.3rem}.nav-menu:after,.nav-menu:before,.page-pagination:after,.page-pagination:before,.site-main:after,.site-main:before{content:"";display:table}.nav-menu:after,.page-pagination:after,.site-main:after{clear:both}.social a{width:30px;height:30px;display:inline-block;color:#fff;padding:8px 0;text-align:center;border-radius:15px}.social-facebook{background-color:#3b5998}.social-twitter{background-color:#55acee}.social-linkedin{background-color:#0077b5}.social-reddit{background-color:#ff5700}.social-digg{background-color:#005be2}.site-main{margin:0 auto;width:1140px;padding:4.6rem 0}.content-area{float:left;margin:0 1rem;width:800px}.sidebar-container{float:right;margin:0 1rem;width:220px}.site-footer{margin:0 auto;max-width:1140px;overflow:hidden}.widget-area{width:100%}.widget{-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin:0 0 2.3rem;padding:0 0 2.3rem;word-wrap:break-word}.widget:not(:last-child){border-bottom:1px solid rgba(0,0,0,.1)}.widget-title{font-size:2rem;font-weight:400;margin:0 0 1rem;text-transform:uppercase}.widget ul{list-style-type:none;margin:0;padding:0}.widget li{padding:5px 0}.widget:not(.widget-rewards) a{border-bottom:1px solid rgba(0,0,0,.1)}.widget .author-profiles{margin:1.3rem 0}.author-profiles>li{display:inline}.author-profiles>li+li{margin-left:15px}.widget .author-profiles a{font-size:2.5rem;border:none}.author-name{margin:0}.widget .entry{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%}.widget .entry-count{-ms-flex-preferred-size:auto;flex-basis:auto;text-align:right;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:0;flex-shrink:0}.blog-list h4{margin:2.3rem 0 1rem}.profile-developpez{margin:1rem 0 0}.post-meta{margin:1.3rem 0 2.3rem}.post-meta>div{display:inline-block}.post-meta>div+div{margin-left:1.5rem}.post-meta>.social{margin-left:3.5rem;line-height:1}.item-content header a{text-decoration:none}.post-meta ul{padding:0;list-style:none}.post-meta ul,.post-meta ul>li{display:inline}.post-meta ul>li:not(:last-child):after{content:", "}.item-content{font-size:1.5rem}.images-container{display:block;text-align:center;margin:5rem 0}.images-container img{display:inline-block;max-width:100%;height:auto}.images-container img+img{margin-left:2.3rem}.post header h1{font-size:3.4rem;margin-top:0;margin-bottom:0}.item-content a{text-decoration:underline}.item-content h1{font-size:3.4rem}.item-content h2{font-size:2.6rem}.item-content h3{font-size:2.2rem}.post-list .post{border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:7.6rem;padding-bottom:7.6rem}.post-draft .entry-title:before{color:orange;content:"DRAFT";margin-right:5px}.note,.tip,.warning{display:block;margin:16px 0;padding:12px 24px}.note p,.tip p,.warning p{margin:0}.note{background:#e1f5fe;color:#0288d1}.tip,.warning{background:#fdf7cf;color:#343434}.page-pagination a{background:#333;color:#eee;padding:6px 16px}.page-previous{float:left}.page-next{float:right}.read-more{font-weight:700}.item-comments{border-top:1px solid rgba(0,0,0,.1);padding-top:1.6rem;margin-top:5rem}.add-comment,.item-comment{margin:16px 0;padding:12px 0}.item-comment p{margin:0 0 1.2rem}.item-comment footer{font-size:1.6rem}.comment-author{font-weight:700}.item-comment time{font-size:smaller}label{display:block;margin-top:1rem}input:not([type=checkbox]){width:300px}textarea{width:100%}input,textarea{font-size:13px;line-height:2.3rem}button[type=submit]{margin-top:1rem}.cc{position:fixed;left:0;right:0;bottom:0;background-color:#383b75;padding:15px}.cc,.cc a{color:#fff}.cc a{text-decoration:underline;opacity:.8}.cc a:focus,.cc a:hover{opacity:1}.cc button{float:right;color:#000;background-color:#f1d600;border-color:transparent;cursor:pointer}.cc-hide{display:none}.fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.fa-9{width:.5625em}.fa-12{width:.75em}.fa-14{width:.875em}.fa-16{width:1em}.fa-18{width:1.125em}.fa-20{width:1.25em}@media screen and (max-width:1200px){.sidebar-container,.site-main .content-area{float:none;margin-left:auto;margin-right:auto}.sidebar-container{margin-top:40px}.site-footer{text-align:center}}@media screen and (min-width:769px) and (max-width:1200px){.main-navigation,.site-footer,.site-header .home-link,.site-main{max-width:100%}.site-main .content-area{width:80%}}@media screen and (max-width:768px){.main-navigation,.site-footer,.site-header .home-link,.site-main{max-width:100%}.site-main .content-area{float:none;width:95%}.site-header .site-title{font-size:5rem;letter-spacing:0;padding:2rem 0 .5rem}}</style>
+    <link href="https://www.meziantou.net/2018/02/01/starting-a-typescript-project-with-visual-studio-code" rel="canonical"><meta content="Visual Studio Code is a very great IDE for TypeScript. While VS Code is a lightweight source editor, it is very powerful. It supports lots of languages such as C++, C#, Java, Python, PHP, Go, but some of them have a better integration. This is the case for TypeScript. VS Code allows you to write TypeScript code with autocompletion, refactoring, error reporting, quick fixes, automatic build, debugging,…" name="description"><meta content="summary" name="twitter:card"><meta content="@meziantou" name="twitter:site"><meta content="Starting a TypeScript project with Visual Studio Code" name="twitter:title"><meta content="Visual Studio Code is a very great IDE for TypeScript. While VS Code is a lightweight source editor, it is very powerful. It supports lots of languages such as C++, C#, Java, Python, PHP, Go, but some of them have a better integration. This is the case for TypeScript. VS Code allows you to write TypeScript code with autocompletion, refactoring, error reporting, quick fixes, automatic build, debugging,…" name="twitter:description"><link href="https://twitter.com/meziantou" rel="me"><meta content="meziantou" name="twitter:creator"><meta content="/assets/downloadvscode.png" name="twitter:image"><meta content="/assets/downloadvscode.png" name="og:image"><meta content="/assets/downloadvscode-th-w800-h0.png" name="twitter:image"><meta content="/assets/downloadvscode-th-w800-h0.png" name="og:image"><meta content="/assets/downloadvscode-th-w500-h0.png" name="twitter:image"><meta content="/assets/downloadvscode-th-w500-h0.png" name="og:image"><meta content="/assets/vscodetasks.png" name="twitter:image"><meta content="/assets/vscodetasks.png" name="og:image"><meta content="/assets/vscodetasks-th-w800-h0.png" name="twitter:image"><meta content="/assets/vscodetasks-th-w800-h0.png" name="og:image"><meta content="/assets/vscodetasks-th-w500-h0.png" name="twitter:image"><meta content="/assets/vscodetasks-th-w500-h0.png" name="og:image"><meta content="/assets/vscodetasks2.png" name="twitter:image"><meta content="/assets/vscodetasks2.png" name="og:image"><meta content="/assets/vscodetasks2-th-w800-h0.png" name="twitter:image"><meta content="/assets/vscodetasks2-th-w800-h0.png" name="og:image"><meta content="/assets/vscodetasks2-th-w500-h0.png" name="twitter:image"><meta content="/assets/vscodetasks2-th-w500-h0.png" name="og:image"><meta content="/assets/vscodebuild.png" name="twitter:image"><meta content="/assets/vscodebuild.png" name="og:image"><meta content="/assets/vscodebuild-th-w800-h0.png" name="twitter:image"><meta content="/assets/vscodebuild-th-w800-h0.png" name="og:image"><meta content="/assets/vscodebuild-th-w500-h0.png" name="twitter:image"><meta content="/assets/vscodebuild-th-w500-h0.png" name="og:image"><meta content="/assets/vscodesettings.png" name="twitter:image"><meta content="/assets/vscodesettings.png" name="og:image"><meta content="/assets/vscodesettings-th-w800-h0.png" name="twitter:image"><meta content="/assets/vscodesettings-th-w800-h0.png" name="og:image"><meta content="/assets/vscodesettings-th-w500-h0.png" name="twitter:image"><meta content="/assets/vscodesettings-th-w500-h0.png" name="og:image"><meta content="https://www.meziantou.net/2018/02/01/starting-a-typescript-project-with-visual-studio-code" name="og:url"><meta content="article" name="og:type"><meta content="Starting a TypeScript project with Visual Studio Code" name="og:title"><meta content="Visual Studio Code is a very great IDE for TypeScript. While VS Code is a lightweight source editor, it is very powerful. It supports lots of languages such as C++, C#, Java, Python, PHP, Go, but some of them have a better integration. This is the case for TypeScript. VS Code allows you to write TypeScript code with autocompletion, refactoring, error reporting, quick fixes, automatic build, debugging,…" name="og:description"><meta content="Meziantou's blog" name="og:site_name"><meta content="Gérald Barré" name="article:author"><meta content="Meziantou" name="article:author:username"><meta content="2018-02-01T12:00:00.0000000Z" name="article:published_time"><meta content="2018-02-01T12:00:00.0000000Z" name="article:modified_time"><meta content="648879778835106" name="fb:app_id"><link href="https://www.meziantou.net/?format=rss" rel="alternate" type="application/rss+xml"><link href="https://www.meziantou.net/?format=atom" rel="alternate" type="application/atom+xml">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+    <link rel="dns-prefetch" href="https://dc.services.visualstudio.com/">
+    <script async="" src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/js"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-35520000-1', {'displayFeaturesTask': 'null'});
+</script>
+    <script type="text/javascript">
+	
+    var appInsights=window.appInsights||function(a){
+        function b(a){c[a]=function(){var b=arguments;c.queue.push(function(){c[a].apply(c,b)})}}var c={config:a},d=document,e=window;setTimeout(function(){var b=d.createElement("script");b.src=a.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js",d.getElementsByTagName("script")[0].parentNode.appendChild(b)});try{c.cookie=d.cookie}catch(a){}c.queue=[];for(var f=["Event","Exception","Metric","PageView","Trace","Dependency"];f.length;)b("track"+f.pop());if(b("setAuthenticatedUserContext"),b("clearAuthenticatedUserContext"),b("startTrackEvent"),b("stopTrackEvent"),b("startTrackPage"),b("stopTrackPage"),b("flush"),!a.disableExceptionTracking){f="onerror",b("_"+f);var g=e[f];e[f]=function(a,b,d,e,h){var i=g&&g(a,b,d,e,h);return!0!==i&&c["_"+f](a,b,d,e,h),i}}return c
+    }({
+        instrumentationKey: 'aa80543c-e3c6-4298-8a77-367e775e1c66'
+    });
+
+    window.appInsights=appInsights,appInsights.queue&&0===appInsights.queue.length&&appInsights.trackPageView();
+	
+    </script>
+<script src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/ai.js"></script></head>
+<body>
+    <header class="site-header">
+        <a class="home-link" href="https://www.meziantou.net/" rel="home">
+            <h1 class="site-title">Meziantou's blog</h1>
+            <h2 class="site-description">Blog about Microsoft technologies (.NET, ASP.NET, WPF, UWP, TypeScript, etc.)</h2>
+        </a>
+        <div id="navbar" class="header-navigation">
+            <nav class="navigation main-navigation">
+                <div>
+                    <ul class="nav-menu nav-menu-links">
+                        <li class="menu-item"><a href="https://www.meziantou.net/">Home</a></li>
+                        <li class="menu-item"><a href="https://www.meziantou.net/projects">Projects</a></li>
+                        <li class="menu-item"><a href="https://www.meziantou.net/archives">Archives</a></li>
+                        <li class="menu-item"><a href="https://www.meziantou.net/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navigation-right">
+                    <ul class="nav-menu nav-menu-links">
+                        <li><a class="rss" href="https://feedly.com/i/subscription/feed/https%3A%2F%2Fwww.meziantou.net%2F%3Fformat%3Drss" title="Subscribe on Feedly"><svg viewBox="0 0 24 24" class="fa-16" aria-hidden="true"><path d="M7.396 21.932L.62 15.108c-.825-.824-.825-2.609 0-3.39l9.709-9.752c.781-.78 2.521-.78 3.297 0l9.756 9.753c.826.825.826 2.611 0 3.391l-6.779 6.824c-.411.41-1.053.686-1.695.686H9c-.596-.001-1.19-.276-1.604-.688zm6.184-2.656c.137-.138.137-.413 0-.55l-1.328-1.328c-.138-.15-.412-.15-.549 0l-1.329 1.319c-.138.134-.138.405 0 .54l1.054 1.005h1.099l1.065-1.02-.012.034zm0-5.633c.092-.09.092-.32 0-.412l-1.42-1.409c-.09-.091-.32-.091-.412 0l-4.121 4.124c-.139.15-.139.465 0 .601l.959.96h1.102l3.893-3.855v-.009zm0-5.587c.092-.091.137-.366 0-.458l-1.375-1.374c-.09-.104-.365-.104-.502 0l-6.914 6.915c-.094.09-.14.359-.049.449l1.1 1.05h1.053l6.687-6.582z" fill="currentColor"></path></svg></a></li>
+                        <li><a class="rss" rel="home" type="application/rss+xml" href="https://www.meziantou.net/?format=rss" title="RSS feed"><svg viewBox="0 0 448 512" class="fa-14" aria-hidden="true"><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z" fill="currentColor"></path></svg></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="site-main">
+        <div class="content-area">
+            <div class="site-content" role="main">
+                <article class="post item-content single-post " itemscope="" itemtype="http://schema.org/BlogPosting" lang="en">
+    <header>
+    <a href="https://www.meziantou.net/2018/02/01/starting-a-typescript-project-with-visual-studio-code" rel="bookmark">
+        <h1 class="entry-title">Starting a TypeScript project with Visual Studio Code</h1>
+    </a>
+    <div class="post-meta">
+        <div class="date">
+            <svg viewBox="0 0 448 512" class="fa-14" aria-hidden="true"><path d="M436 160H12c-6.6 0-12-5.4-12-12v-36c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48v36c0 6.6-5.4 12-12 12zM12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm116 204c0-6.6-5.4-12-12-12H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm128 128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm128 128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40z" fill="currentColor"></path></svg>
+            <time class="entry-date" title="Thursday, February 1, 2018" datetime="2018-02-01T12:00:00.000">2/1/18</time>
+        </div>
+        <div class="authors">
+            <svg viewBox="0 0 448 512" class="fa-14" aria-hidden="true"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" fill="currentColor"></path></svg>
+            <ul>
+                    <li><a href="https://www.meziantou.net/author/meziantou" rel="author">Gérald Barré</a></li>
+            </ul>
+        </div>
+        <div class="categories">
+            <svg viewBox="0 0 640 512" class="fa-20" aria-hidden="true"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z" fill="currentColor"></path></svg>
+            <ul>
+                    <li><a href="https://www.meziantou.net/category/typescript">TypeScript</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meziantou.net%2F2018%2F02%2F01%2Fstarting-a-typescript-project-with-visual-studio-code%3Futm_medium%3Dsocial%26utm_source%3Dfacebook&amp;t=Starting+a+TypeScript+project+with+Visual+Studio+Code" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="social-facebook"><svg viewBox="0 0 264 512" class="fa-9" aria-hidden="true"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229" fill="currentColor"></path></svg></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.meziantou.net%2F2018%2F02%2F01%2Fstarting-a-typescript-project-with-visual-studio-code%3Futm_medium%3Dsocial%26utm_source%3Dtwitter&amp;text=Starting+a+TypeScript+project+with+Visual+Studio+Code+https%3A%2F%2Fwww.meziantou.net%2F2018%2F02%2F01%2Fstarting-a-typescript-project-with-visual-studio-code%3Futm_medium%3Dsocial%26utm_source%3Dtwitter&amp;via=meziantou" target="_blank" rel="noopener noreferrer" title="Share on Twitter" class="social-twitter"><svg viewBox="0 0 512 512" class="fa-16" aria-hidden="true"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></a>
+            <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.meziantou.net%2F2018%2F02%2F01%2Fstarting-a-typescript-project-with-visual-studio-code%3Futm_medium%3Dsocial%26utm_source%3Dlinkedin&amp;title=Starting+a+TypeScript+project+with+Visual+Studio+Code" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="social-linkedin"><svg viewBox="0 0 448 512" class="fa-14" aria-hidden="true"><path d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z" fill="currentColor"></path></svg></a>
+            <a href="http://reddit.com/submit?url=https%3A%2F%2Fwww.meziantou.net%2F2018%2F02%2F01%2Fstarting-a-typescript-project-with-visual-studio-code%3Futm_medium%3Dsocial%26utm_source%3Dreddit" target="_blank" rel="noopener noreferrer" title="Share on Reddit" class="social-reddit"><svg viewBox="0 0 512 512" class="fa-16" aria-hidden="true"><path d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z" fill="currentColor"></path></svg></a>
+            <a href="https://www.digg.com/submit?url=https%3A%2F%2Fwww.meziantou.net%2F2018%2F02%2F01%2Fstarting-a-typescript-project-with-visual-studio-code%3Futm_medium%3Dsocial%26utm_source%3Ddigg" target="_blank" rel="noopener noreferrer" title="Share on Digg" class="social-digg"><svg viewBox="0 0 512 512" class="fa-16" aria-hidden="true"><path d="M81.7 172.3H0v174.4h132.7V96h-51v76.3zm0 133.4H50.9v-92.3h30.8v92.3zm297.2-133.4v174.4h81.8v28.5h-81.8V416H512V172.3H378.9zm81.8 133.4h-30.8v-92.3h30.8v92.3zm-235.6 41h82.1v28.5h-82.1V416h133.3V172.3H225.1v174.4zm51.2-133.3h30.8v92.3h-30.8v-92.3zM153.3 96h51.3v51h-51.3V96zm0 76.3h51.3v174.4h-51.3V172.3z" fill="currentColor"></path></svg></a>
+        </div>
+    </div>
+</header>
+    <div class="item-content" itemprop="articleBody"><p>Visual Studio 
+Code is a very great IDE for TypeScript. While VS Code is a lightweight 
+source editor, it is very powerful. It supports lots of languages such 
+as C++, C#, Java, Python, PHP, Go, but some of them have a better 
+integration. This is the case for TypeScript. VS Code allows you to 
+write TypeScript code with autocompletion, refactoring, error reporting,
+ quick fixes, automatic build, debugging, etc. In this post, we'll see 
+how to set up your first TypeScript project with VS Code.</p><p>If you are not familiar with VS Code, here's a quick description from the documentation:</p><h2 id="install-visual-studi">Install Visual Studio Code and TypeScript</h2><ol><li>Install VS Code: https://code.visualstudio.com/</li></ol><p class="images-container"><a href="https://www.meziantou.net/assets/downloadvscode.png?v=eb8d659bf093b3c53d259e8f36f7cdf2"><img src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/downloadvscode-th-w800-h0.png" srcset="/assets/downloadvscode.png?v=eb8d659bf093b3c53d259e8f36f7cdf2 1159w,/assets/downloadvscode-th-w800-h0.png?v=29f7d98dde5695560cd5ee6a59d2e661 800w,/assets/downloadvscode-th-w500-h0.png?v=e851a19374271a7010579ca957082ca5 500w" sizes="100vw" width="800" height="371"></a></p><ol start="2"><li>Install NodeJS&nbsp;: <a href="https://nodejs.org/">https://nodejs.org/</a></li><li>Install TypeScript using the following command line:</li></ol><div class="code-toolbar"><pre class=" language-cmd"><code class=" language-cmd"><span class="token function">npm</span> <span class="token function">install</span> -g typescript</code></pre><div class="toolbar"><div class="toolbar-item"><span>Cmd</span></div></div></div><ol start="4"><li>Check TypeScript is installed</li></ol><div class="code-toolbar"><pre class=" language-cmd"><code class=" language-cmd">tsc --version</code></pre><div class="toolbar"><div class="toolbar-item"><span>Cmd</span></div></div></div><h2 id="create-a-project">Create a project</h2><ol><li>Create a new folder that will contains the sources</li><li>Create a <code>tsconfig.json</code> with the following content (you can use the command <code>tsc --init</code>):</li></ol><div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
+    <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"es5"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><div class="toolbar"><div class="toolbar-item"><span>JSON</span></div></div></div><ol start="3"><li>Create an <code>src</code> folder</li><li>Add an empty TypeScript file in the <code>src</code> folder</li></ol><p>The file structure should be like:</p><div class="code-toolbar"><pre class=" language-text"><code class=" language-text">MyTypeScriptProject
+├── src
+│   └── main.ts
+└── tsconfig.json</code></pre><div class="toolbar"><div class="toolbar-item"><span>Text</span></div></div></div><h2 id="compile-the-project">Compile the project</h2><p>Open the command palette using <kbd>CTRL+SHIFT+P</kbd>, and type "Tasks":</p><p class="images-container"><a href="https://www.meziantou.net/assets/vscodetasks.png?v=d6bedb2714f2befeb8332accb53319c8"><img src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/vscodetasks-th-w800-h0.png" srcset="/assets/vscodetasks.png?v=d6bedb2714f2befeb8332accb53319c8 866w,/assets/vscodetasks-th-w800-h0.png?v=39ce6af08cbd17af453b6cda7e391176 800w,/assets/vscodetasks-th-w500-h0.png?v=1f282ec6dab96180da473953d2a90531 500w" sizes="100vw" width="800" height="276"></a></p><p>Select "Configure Default Build Task", then select "tsc:watch"</p><p class="images-container"><a href="https://www.meziantou.net/assets/vscodetasks2.png?v=9a297286253f2f6031edbc8daf5aeec3"><img src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/vscodetasks2-th-w800-h0.png" srcset="/assets/vscodetasks2.png?v=9a297286253f2f6031edbc8daf5aeec3 866w,/assets/vscodetasks2-th-w800-h0.png?v=5d07508a4da2ad0a7a72768c58f4cf52 800w,/assets/vscodetasks2-th-w500-h0.png?v=8b10d61b7fc3c4fb4b4d3e85230f4502 500w" sizes="100vw" width="800" height="160"></a></p><p>This will create a new file <code>.vscode/tasks.json</code> with the following content:</p><div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
+    // See https<span class="token operator">:</span>//go.microsoft.com/fwlink/?LinkId=<span class="token number">733558</span>
+    // for the documentation about the tasks.json format
+    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"2.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"tasks"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"typescript"</span><span class="token punctuation">,</span>
+            <span class="token property">"tsconfig"</span><span class="token operator">:</span> <span class="token string">"tsconfig.json"</span><span class="token punctuation">,</span>
+            <span class="token property">"option"</span><span class="token operator">:</span> <span class="token string">"watch"</span><span class="token punctuation">,</span>
+            <span class="token property">"problemMatcher"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">"$tsc-watch"</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">"group"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"kind"</span><span class="token operator">:</span> <span class="token string">"build"</span><span class="token punctuation">,</span>
+                <span class="token property">"isDefault"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre><div class="toolbar"><div class="toolbar-item"><span>JSON</span></div></div></div><p>You can now build your TypeScript files by pressing <kbd>CTRL+SHIFT+B</kbd>. After the compilation succeed, you should see a new file <code>main.js</code> in the explorer:</p><p class="images-container"><a href="https://www.meziantou.net/assets/vscodebuild.png?v=53e98d6f17377842c20476b994ab68dc"><img src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/vscodebuild-th-w800-h0.png" srcset="/assets/vscodebuild.png?v=53e98d6f17377842c20476b994ab68dc 966w,/assets/vscodebuild-th-w800-h0.png?v=d27a2816f468cd4b158a7bf17913a350 800w,/assets/vscodebuild-th-w500-h0.png?v=55fb7f54054ad787c2a030ee66715825 500w" sizes="100vw" width="800" height="504"></a></p><p>The task is a watch task, so TypeScript will run automatically when you change a TypeScript file.</p><h2 id="hide-the-javascript">Hide the JavaScript file from the Explorer</h2><p>After
+ compiling the TypeScript files, you'll have lots of ts and js files in 
+the explorer of VS Code. As you'll never edit the JS files, you can 
+simply hide them in the Explorer.</p><ol><li>Open the settings: File -&gt; Preferences -&gt; Settings</li><li>Select "Workspace settings" in the right panel</li><li>Add the following json</li></ol><div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
+    <span class="token property">"files.exclude"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"**/*.js"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><div class="toolbar"><div class="toolbar-item"><span>JSON</span></div></div></div><p class="images-container"><a href="https://www.meziantou.net/assets/vscodesettings.png?v=140c076fd96509bd949db8d2dbc7c425"><img src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/vscodesettings-th-w800-h0.png" srcset="/assets/vscodesettings.png?v=140c076fd96509bd949db8d2dbc7c425 866w,/assets/vscodesettings-th-w800-h0.png?v=0a0ebfd45166a27b5347a2addf129844 800w,/assets/vscodesettings-th-w500-h0.png?v=34e9976b572b9c765e946bf7a8256e64 500w" sizes="100vw" width="800" height="562"></a></p><p>The workspace settings are saved in <code>.vscode/settings.json</code>, so this will apply only for the current project.</p><h2 id="conclusion-3bd2c8">Conclusion</h2><p>You are now ready to use Visual Studio Code for your TypeScript projects</p></div>
+
+    
+<section class="item-comments">
+
+    <h2 id="AddComment"><svg viewBox="0 0 512 512" class="fa-16" aria-hidden="true"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z" fill="currentColor"></path></svg> Leave a reply</h2>
+        <form method="post" action="#AddComment" class="add-comment">
+            <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+
+            <div>
+                <label for="comment-username">Name*</label>
+                <input id="comment-username" name="Username" required="" type="text">
+            </div>
+
+            <div>
+                <label for="comment-email">Email address* <em>(not displayed)</em></label>
+                <input id="comment-email" name="Email" required="" type="email">
+            </div>
+
+            <div>
+                <label for="comment-website">Website</label>
+                <input id="comment-website" name="Website" type="url">
+            </div>
+
+            <div>
+                <label for="comment-captcha">Captcha: 14+52=</label>
+                <input id="comment-captcha" name="Captcha" placeholder="Hint: the answer is 66" required="" pattern="66" oninvalid="this.setCustomValidity('The answer is 66')" oninput="this.setCustomValidity('')" type="text">
+            </div>
+
+            <div>
+                <label for="comment-comment">Comment* <em>(<a href="https://guides.github.com/features/mastering-markdown" target="_blank" rel="noreferrer noopener">markdown allowed</a>)</em></label>
+                <textarea id="comment-comment" name="Comment" rows="5" required=""></textarea>
+            </div>
+
+            <button type="submit">Submit comment</button>
+        </form>
+</section>
+</article>
+
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="widget-area">
+                    <aside class="widget widget-author">
+                        <h3 class="widget-title author-name">Gérald Barré</h3>
+                        <p class="author-nickname">aka. Meziantou</p>
+                        <p></p>
+                        <ul class="author-profiles">
+                                <li>
+                                    <a href="https://stackoverflow.com/users/2996339" title="StackOverflow" target="_blank" rel="noopener noreferrer">
+                                        <svg viewBox="0 0 384 512" class="fa-12" aria-hidden="true"><path d="M293.7 300l-181.2-84.5 16.7-36.5 181.3 84.7-16.8 36.3zm48-76L188.2 95.7l-25.5 30.8 153.5 128.3 25.5-30.8zm39.6-31.7L262 32l-32 24 119.3 160.3 32-24zM290.7 311L95 269.7 86.8 309l195.7 41 8.2-39zm31.6 129H42.7V320h-40v160h359.5V320h-40v120zm-39.8-80h-200v39.7h200V360z" fill="currentColor"></path></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/meziantou" title="GitHub" target="_blank" rel="noopener noreferrer">
+                                        <svg viewBox="0 0 496 512" class="fa-16" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="currentColor"></path></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/meziantou" title="Twitter" target="_blank" rel="noopener noreferrer">
+                                        <svg viewBox="0 0 512 512" class="fa-16" aria-hidden="true"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://fr.linkedin.com/in/meziantou" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                        <svg viewBox="0 0 448 512" class="fa-14" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" fill="currentColor"></path></svg>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="mailto:contact@meziantou.net" title="Email address">
+                                        <svg viewBox="0 0 512 512" class="fa-16" aria-hidden="true"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" fill="currentColor"></path></svg>
+                                    </a>
+                                </li>
+                        </ul>
+
+                            <div>
+                                <a href="https://stackoverflow.com/users/2996339" target="_blank" rel="noopener noreferrer" title="StackOverflow profile of Gérald Barré">
+                                    <img src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/2996339.png" alt="StackOverflow profile of Gérald Barré" width="208" height="58">
+                                </a>
+                            </div>
+                        <div class="profile-developpez">
+                            <a href="http://www.developpez.net/forums/u363647/meziantou/" target="_blank" rel="noopener noreferrer">Developpez.net</a>
+                        </div>
+                        <div class="blog-list">
+                            <h4>Other blogs</h4>
+                            <ul>
+                                <li>
+                                    <a href="https://www.softfluent.fr/blog/expertise/user/gba?count=-1" target="_blank" rel="noopener noreferrer">Blog SoftFluent (French)</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.softfluent.com/blog/dev/user/gba?count=-1" target="_blank" rel="noopener noreferrer">Blog SoftFluent (English)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                <aside class="widget widget-rewards">
+                    <a href="https://blog.feedspot.com/dotnet_blogs/" title="Dot Net blogs"><img src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/dotnet_blogs.png" alt="Dot Net blogs"></a>
+                </aside>
+                <aside class="widget widget-recentposts">
+                    <h3 class="widget-title">Recent posts</h3>
+                    <ul>
+                            <li><a href="https://www.meziantou.net/2018/09/24/getting-the-date-of-build-of-a-net-assembly-at-runtime">Getting the date of build of a .NET assembly at runtime</a></li>
+                            <li><a href="https://www.meziantou.net/2018/09/09/exploring-the-msbuild-log-using-the-binary-log-viewer">Exploring the MSBuild log using the binary log viewer</a></li>
+                            <li><a href="https://www.meziantou.net/2018/08/28/merging-assemblies-using-ilrepack">Merging assemblies using ILRepack</a></li>
+                            <li><a href="https://www.meziantou.net/2018/08/14/a-tool-to-help-you-identifying-unused-css-rules">A tool to help you identifying unused CSS rules</a></li>
+                            <li><a href="https://www.meziantou.net/2018/07/30/c-compiler-strict-mode">C# compiler strict mode</a></li>
+                    </ul>
+                </aside>
+                <aside class="widget widget-categories">
+                    <h3 class="widget-title">Categories</h3>
+                    <ul>
+                            <li><a class="entry" href="https://www.meziantou.net/category/dotnet"><span class="entry-name">.NET</span> <span class="entry-count">(94)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/asp-net-core"><span class="entry-name">ASP.NET Core</span> <span class="entry-count">(19)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/azure"><span class="entry-name">Azure</span> <span class="entry-count">(7)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/entity-framework"><span class="entry-name">Entity Framework</span> <span class="entry-count">(6)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/hyper-v"><span class="entry-name">Hyper-V</span> <span class="entry-count">(2)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/linux"><span class="entry-name">Linux</span> <span class="entry-count">(3)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/news"><span class="entry-name">News</span> <span class="entry-count">(7)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/others"><span class="entry-name">Others</span> <span class="entry-count">(11)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/security"><span class="entry-name">Security</span> <span class="entry-count">(16)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/sharepoint"><span class="entry-name">SharePoint</span> <span class="entry-count">(1)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/sql"><span class="entry-name">SQL</span> <span class="entry-count">(21)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/tips"><span class="entry-name">Tips</span> <span class="entry-count">(4)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/tools"><span class="entry-name">Tools</span> <span class="entry-count">(12)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/typescript"><span class="entry-name">TypeScript</span> <span class="entry-count">(18)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/visual-studio"><span class="entry-name">Visual Studio</span> <span class="entry-count">(5)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/web"><span class="entry-name">Web</span> <span class="entry-count">(44)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/windows"><span class="entry-name">Windows</span> <span class="entry-count">(11)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/winrt"><span class="entry-name">WinRT</span> <span class="entry-count">(2)</span></a></li>
+                            <li><a class="entry" href="https://www.meziantou.net/category/wpf"><span class="entry-name">WPF</span> <span class="entry-count">(16)</span></a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">Copyright © 2018 Gérald Barré - all right reserved. Use of this site constitutes acceptance of our <a href="https://www.meziantou.net/terms-of-use">Terms of use</a> and <a href="https://www.meziantou.net/privacy-policy">Privacy policy</a>.</footer>
+    <script>var loadDeferredStyles=function(){var e=document.getElementById('deferred-styles'),n=document.createElement('div');n.innerHTML=e.textContent,document.body.appendChild(n),e.parentElement.removeChild(e)},r=window.requestAnimationFrame;r?r(function(){window.setTimeout(loadDeferredStyles,0)}):window.addEventListener('load',loadDeferredStyles);</script>
+    <script async="" src="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/prism.js"></script>
+    <div class="cc" role="dialog">This website uses cookies to ensure you get the best experience on our website. <a href="https://www.meziantou.net/privacy-policy">Learn more</a><button type="button" onclick='this.parentElement.classList.add("cc-hide")'>Got it!</button></div>
+    <!-- Last updated: 2018-10-04 02:02:20 -->
+
+<div>
+        <link rel="stylesheet" href="Starting%20a%20TypeScript%20project%20with%20Visual%20Studio%20Code%20-%20Meziantou's%20blog_archivos/prism.css">
+    </div></body></html>
