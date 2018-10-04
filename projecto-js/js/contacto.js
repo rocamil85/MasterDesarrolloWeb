@@ -23,8 +23,9 @@ $(document).ready(function () {
 
     $("#form").submit(function (e) {
         e.preventDefault();
-        localStorage.setItem("name", $("#input_name").val());
-
+        console.log("envioooo");
+        localStorage.setItem("name", $("#name").val());
+        console.log(localStorage);
         $("#caja_login").hide();
         $("#parrafo").html("Bienvenido: " + localStorage.getItem("name"));
         $("#parrafo").append('<br/><a href="" id="logout">Logout</a>');
@@ -39,8 +40,9 @@ $(document).ready(function () {
 
     //form
     $.validate({
-        lang: 'es'
+        lang: 'es',
+        errorMessagePosition:'top'
       });
-
+      
     //---
 });
