@@ -8,10 +8,12 @@ var Camiseta = /** @class */ (function () {
         this.talla = talla;
         this.precio = precio;
     }
+    Camiseta.prototype.Mix = function () {
+        return this.color + " " + this.marca;
+    };
+    ;
     return Camiseta;
 }());
-/*
-public setColor(nuevo:string)
-{
-this.color =nuevo;
-}*/ 
+var a = new Camiseta("rojo", "adidas", "Abc", "M", 15);
+var b = a.Mix();
+console.log(b);
