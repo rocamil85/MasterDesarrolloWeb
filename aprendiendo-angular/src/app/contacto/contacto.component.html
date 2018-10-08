@@ -1,0 +1,15 @@
+<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+  <label for="">Nombre</label><br>
+<input type="text" #nombre="ngModel" [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone:true}" required  pattern="[a-zA-Z]+"><br>
+
+<label for="">Apellidos</label><br>
+<input type="text" #apellidos="ngModel" [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone:true}" required pattern="[a-zA-Z]+"><br>
+
+<label for="">Email</label><br>
+<input type="text" #email="ngModel" [(ngModel)]="usuario.email" [ngModelOptions]="{standalone:true}" required pattern="[a-zA-Z]+"><br>
+
+<label for="">Mensaje</label><br>
+<textarea  id="" cols="30" rows="10" #mensaje="ngModel" [(ngModel)]="usuario.mensaje" [ngModelOptions]="{standalone:true}" required pattern="[a-zA-Z]+"></textarea><br>
+
+<button type="submit" [disabled]="!formContacto.form.valid">Enviar</button>
+</form>

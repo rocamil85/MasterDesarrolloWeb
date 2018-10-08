@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Configuracion } from './models/configuracion';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aprendiendo-angular';
-}
+  description = Configuracion.descripcion;
+} 

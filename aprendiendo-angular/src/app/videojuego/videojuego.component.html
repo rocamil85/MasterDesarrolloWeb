@@ -8,4 +8,22 @@
     <li>{{paisFabricacion}}</li>
     <li>{{informacion()}}</li>    
 </ul>
+
+
+<ul>    
+    <li *ngFor="let item of zapatillas" [ngStyle]="{'text-decoration': !item.stock ? 'line-through':'none'}">{{item.marca}}  {{item.precio}}$ 
+        <span *ngIf="item.precio < 80">!!!Oferta!!!</span>
+    </li>      
+</ul>
  
+
+<h2 [ngClass]="{'TwoWay':true}">Usando Two Way DataBinding</h2>
+<input type="text" [(ngModel)]="paisFabricacion"> 
+<button (click)="MostrarPais()">Mostrar Pais</button>
+<button (click)="AdicionarPais()">Adicionar Pais</button>
+
+<strong>{{paisFabricacion}}</strong>
+
+<ul>
+    <li *ngFor="let item of paisesFabricacion">{{item}}</li>
+</ul>

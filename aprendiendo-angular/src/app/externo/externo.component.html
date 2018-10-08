@@ -1,0 +1,21 @@
+<div>
+    {{user.first_name}}
+  <h2>{{user.last_name}}</h2>
+  <img src="{{user.avatar}}" >
+</div>
+
+<h2>Crear usuario</h2>
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <label for="">Nombre</label><br>
+  <input type="text" #name="ngModel" [(ngModel)]="new_user.name" [ngModelOptions]="{standalone:true}" ><br>
+  
+  <label for="">Trabajo</label><br>
+  <input type="text" #job="ngModel" [(ngModel)]="new_user.job" [ngModelOptions]="{standalone:true}" ><br>
+
+  <button type="submit" >Enviar</button>
+  </form>
+
+  <div *ngIf="user_guardado">
+  <h2>El usuario guardado tiene como informacion:</h2>
+  <h3>{{user_guardado.name}} y {{user_guardado.job}}</h3>
+</div>

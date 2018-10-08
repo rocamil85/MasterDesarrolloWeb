@@ -1,0 +1,16 @@
+<p>
+  home works!
+</p>
+
+<div>
+    <ng-container *ngIf="identificado; then thenTemplate; else elseTemplate"></ng-container>
+    <ng-template #thenTemplate>
+      <h2>Estas identificado</h2>
+      <button (click)="BorrarIdentificacion()">Borrar Identificacion</button>
+    </ng-template>
+
+    <ng-template #elseTemplate>
+      <h2>No estas identificado</h2>
+      <button (click)="AdicionarIdentificacion()">Adicionar Identificacion</button>
+    </ng-template>
+</div>
