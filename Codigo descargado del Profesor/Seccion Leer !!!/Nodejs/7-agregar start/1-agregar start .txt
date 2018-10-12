@@ -1,0 +1,26 @@
+Dentro del archivo package.json que tiene esta configuracion,añadir la linea ("start":"nodemon index.js") ver abajo
+{
+  "name": "api-rest-nodejs",
+  "version": "1.0.0",
+  "description": "curso nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
+  },
+  "author": "ronaldo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
+
+***************************************************************************
+Luego crear fichero index.js dentro de backend con una implementacion creada,(ver Fichero index.js) y lanzar npm start en la ruta que lleva hasta el backend para visualizar como esta funcionando nodemon mostrando la implementacion que hay en index.js(ver img npm start)
+Luego crear app.js que tiene otra implementacion(ver proyecto).
