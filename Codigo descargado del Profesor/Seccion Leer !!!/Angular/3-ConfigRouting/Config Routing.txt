@@ -1,0 +1,2 @@
+Ver video 184
+-Se crea app.routing.ts a la misma altura que app.module.ts luego que se crean todos los componentes(Ver ejemplo de app.routing.ts)

@@ -1,0 +1,3 @@
+Ir al app.component.html y agregar la etiqueta
+<router-outlet></router-outlet>
+ para que se pueda navegar por todas las rutas mapeadas en el app.routing.ts...

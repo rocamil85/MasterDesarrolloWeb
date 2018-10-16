@@ -1,2 +1,0 @@
-video 178 min 3.35 
-Donde explica como importar FormsModule para usar el two data-binding
