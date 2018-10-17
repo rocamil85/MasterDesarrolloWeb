@@ -1,17 +1,16 @@
-<h1>Portafolio</h1>
 <header>
   <ul>
-    <a [routerLink]="[ '/sobre-mi' ]">Sobre mi</a>
-    <a [routerLink]="[ '/proyectos' ]">proyectos</a>
-    <li class="logo"><a href="#">VR</a></li>
-    <a [routerLink]="[ '/crear-proyecto' ]"> crear-proyecto</a>
-    <a [routerLink]="[ '/contacto' ]">contacto</a>
-    <a [routerLink]="[ '/**' ]">Error</a>
+    <li><a [routerLink]="[ '/sobre-mi' ]" routerLinkActive="actived">Sobre mi</a></li>
+    <li><a [routerLink]="[ '/proyectos' ]" routerLinkActive="actived">proyectos</a></li>
+    <li id="logo"><a href="#">VR</a></li>
+    <li><a [routerLink]="[ '/crear-proyecto' ]" routerLinkActive="actived"> crear-proyecto</a></li>
+    <li><a [routerLink]="[ '/contacto' ]" routerLinkActive="actived">contacto</a></li>
+    <li><a [routerLink]="[ '/**' ]" routerLinkActive="actived">Error</a></li>
   </ul>
 </header>
 
-<section id ="content">
-<router-outlet></router-outlet>
+<section id="content">  
+  <router-outlet></router-outlet>
 </section>
 
 <footer>

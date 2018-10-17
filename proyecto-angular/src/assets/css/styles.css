@@ -29,7 +29,7 @@ body{
 }
 
 /*Barra de navegacion / cabecera*/
-/*
+
 header{
 	display: block;
 	width: 100%;
@@ -52,6 +52,7 @@ header ul li{
 	margin: 0px auto;
 	text-align: center;
 	line-height: 88px;
+	height: inherit;
 }
 
 header a{
@@ -66,28 +67,23 @@ header a{
 
 header a:hover,
 .actived{
-	background: rgba(0,0,0,0.8);
+	background: rgba(20, 13, 13, 0.8);
 }
-*/
+
 /*Logotipo*/
-/*
-#logo{
-	font-family: "finger";
-	font-size: 30px;
-}
-
-#logo a{
-	transition: color 500ms, transform 500ms;
-}
-
 #logo a:hover{
 	background: transparent;
 	color: black;
 	transform:scale(1.50,1.50);
 }
-*/
+
+#logo{
+	font-family: "finger";
+	font-size: 30px;
+}
+
 /*Contenedor principal*/
-/*
+
 #content{
 	min-height: 600px;
 	height: auto;
@@ -99,9 +95,9 @@ header a:hover,
 	background: rgba(255, 255, 255, 0.7);
 	padding-top: 120px;
 }
-*/
+
 /*Pie de pagina*/
-/*
+
 footer{
 	width: 75%;
 	margin: 0px auto;
@@ -109,50 +105,40 @@ footer{
 	color: rgba(0, 0, 0, 0.5);
 }
 
-*/
+
 /*Sobre mi*/
-/*
 #title{
-	width: 70%;
+	width: 75%;
 	margin: 0px auto;
 	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 70px;
 }
 
 #title h1{
-	font-family: "finger";
-	font-size: 60px;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 5px;
+font-size: 50px;
+font-family: 'finger', 'Segoe UI', Roboto, Oxygen;
+border-bottom: 1px solid #e0d7d7;
+padding: 10px;
 }
 
 #title h2{
-	font-size: 25px;
-	color: gray;
-	margin-top: 5px;
-	margin-bottom: 5px;
+color: gray;
 }
 
-article.about{
-	width: 70%;
+.about{
+	width: 75%;
 	margin: 0px auto;
-	margin-bottom: 20px;
-	font-size: 23px;
-}
+	margin-top: 120px;
+	}
 
 .about h2{
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 5px;
-	margin-bottom: 5px;
+border-bottom: 1px solid #e0d7d7;
+margin-bottom: 20px;
 }
 
 .about p{
-	padding-top: 20px;
-	padding-bottom: 30px;
 	text-align: justify;
 }
-*/
+
 /*Sección con formulario*/
 /*
 .container{
