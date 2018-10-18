@@ -16,19 +16,13 @@ export class CreateComponent implements OnInit {
   constructor(private _projectService:ProjectService) { 
     this.title = "Crear un Proyecto";
     this.project = new Project("","Mary","pedagogian","Master",2019,"Special,Primary,Didactic","imageeee");
-
-    /*
-     public _id:string,
-       public name:String,
-       public description:String,
-       public category:String,
-       public year:Number,
-       public langs:String,
-       public image:String    
-    */ 
   }
 
   ngOnInit() {
+  }
+
+  onSubmit(projectForm){
+    console.log(this.project);
   }
 
 }

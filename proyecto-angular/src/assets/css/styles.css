@@ -140,7 +140,7 @@ margin-bottom: 20px;
 }
 
 /*Sección con formulario*/
-/*
+
 .container{
 	padding: 50px;
 	padding-top: 10px;
@@ -227,6 +227,11 @@ form input[type="submit"]:hover{
 
 form input[disabled]{
 	opacity: 0.4;
+	cursor: not-allowed;	
+}
+
+form button[disabled]{
+	opacity: 0.4;
 	cursor: not-allowed;
 }
 
@@ -257,7 +262,7 @@ form input[disabled]{
 	background: red;
 	color: white;
 }
-*/
+
 /*Pagina de proyectos*/
 /*
 .project{
