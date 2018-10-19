@@ -1,43 +1,58 @@
 <div class="container">
   <h2>{{title}}</h2>
+  
+<!--Formulario listo para pastelear-->
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+          <label for="Nombre">Nombre</label>
+          <input type="text" class="form-control" name="name" [(ngModel)]="project.name" #name="ngModel"  required pattern="[a-zA-Z]+"/>
+          <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+              <div *ngIf="name.errors.required">First Name is required</div>
+              <div *ngIf="name.errors">Must be only letters</div>
+          </div>
+      </div>
 
-  <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
-    <p>
-      <label for="name">Nombre</label>
-      <input type="text" #name="ngModel" [(ngModel)]="project.name" [ngModelOptions]="{standalone:true}" required pattern="[a-zA-Z]+">
-      <span class="form_error" *ngIf="name.touched && !name.valid">El nombre es obligatorio</span>
-    </p>
+      <div class="form-group">
+          <label for="Nombre">Descripcion</label>
+          <input type="text" class="form-control" name="description" [(ngModel)]="project.description" #description="ngModel"  required pattern="[a-zA-Z]+"/>
+          <div *ngIf="f.submitted && description.invalid" class="invalid-feedback">
+              <div *ngIf="description.errors.required">Description Name is required</div>
+              <div *ngIf="description.errors">Must be only letters</div>
+          </div>
+      </div>
 
-    <p>
-      <label for="description">Descripcion</label>
-      <textarea #description="ngModel" [(ngModel)]="project.description" [ngModelOptions]="{standalone:true}" required></textarea>
-      <span class="form_error" *ngIf="description.touched && !description.valid">La descriptcion es obligatorio</span>
-    </p>
+      <div class="form-group">
+          <label for="Nombre">Categoria</label>
+          <input type="text" class="form-control" name="category" [(ngModel)]="project.category" #category="ngModel"  required pattern="[a-zA-Z]+"/>
+          <div *ngIf="f.submitted && category.invalid" class="invalid-feedback">
+              <div *ngIf="category.errors.required">Description Name is required</div>
+              <div *ngIf="category.errors">Must be only letters</div>
+          </div>
+      </div>
 
-    <p>
-      <label for="category">Categoria</label>
-      <input type="text" #category="ngModel" [(ngModel)]="project.category" [ngModelOptions]="{standalone:true}" required pattern="[a-zA-Z]+">
-      <span class="form_error" *ngIf="category.touched && !category.valid">La Categoria es obligatorio</span>
-    </p>
+      <div class="form-group">
+          <label for="Nombre">Año de lanzamiento</label>
+          <input type="text" class="form-control" name="year" [(ngModel)]="project.year" #year="ngModel" required />
+          <div *ngIf="f.submitted && year.invalid" class="invalid-feedback">
+              <div *ngIf="year.errors.required">Description Name is required</div>
+              <div *ngIf="year.errors">Must be only letters</div>
+          </div>
+      </div>
 
-    <p>
-      <label for="year">Año de lanzamiento</label>
-      <input type="text" #year="ngModel" [(ngModel)]="project.year" [ngModelOptions]="{standalone:true}" required>
-      <span class="form_error" *ngIf="year.touched && !year.valid">El Año de lanzamiento es obligatorio</span>
-    </p>
+      <div class="form-group">
+          <label for="Nombre">Lenguajes involucrados</label>
+          <input type="text" class="form-control" name="langs" [(ngModel)]="project.langs" #langs="ngModel" required pattern="[a-zA-Z]+"/>
+          <div *ngIf="f.submitted && langs.invalid" class="invalid-feedback">
+              <div *ngIf="langs.errors.required">Description Name is required</div>
+              <div *ngIf="langs.errors">Must be only letters</div>
+          </div>
+      </div>
 
-    <p>
-      <label for="langs">Lenguajes utilizados</label>
-      <input type="text" #langs="ngModel" [(ngModel)]="project.langs" [ngModelOptions]="{standalone:true}" required pattern="[a-zA-Z]+">
-      <span class="form_error" *ngIf="langs.touched && !langs.valid">Los Lenguajes son obligatorios</span>
-    </p>
+        <p>
+          <label for="image">Imagen del proyecto</label>
+          <input type="file" placeholder="Subir Imagen">
+        </p>
 
-    <p>
-      <label for="image">Imagen del proyecto</label>
-      <input type="file" placeholder="Subir Imagen">
-    </p>
-
-    <input type="submit" value="Enviar" [disabled]="true">
+    <button>Enviar</button>
   </form>
 </div>
-<!--!projectForm.form.valid-->

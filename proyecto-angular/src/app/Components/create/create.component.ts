@@ -21,7 +21,7 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(projectForm){
+  onSubmit(form){
     console.log(this.project);
   }
 

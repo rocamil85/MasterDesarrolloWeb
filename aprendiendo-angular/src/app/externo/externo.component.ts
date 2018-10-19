@@ -18,12 +18,22 @@ export class ExternoComponent implements OnInit {
       "job": ""
     };
   }
-
+/*
   ngOnInit() {
     this._peticionesService.getUser().subscribe(
       result => {
         this.user = result.data;
         console.log(this.user);
+      },
+      error => {
+        console.log(<any>error);
+      }
+    );
+  }*/
+  ngOnInit() {
+    this._peticionesService.getUser().subscribe(
+      result => {
+        console.log(result);
       },
       error => {
         console.log(<any>error);
