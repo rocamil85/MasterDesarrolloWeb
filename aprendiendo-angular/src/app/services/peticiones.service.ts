@@ -10,8 +10,14 @@ export class PeticionesService{
         this.url = "https://reqres.in/";   
     }
 
+    /*
     getUser():Observable<any>{
         return this._http.get(this.url+"api/users/2");
+    }
+    */
+
+   getUser():Observable<any>{
+    return this._http.get("http://localhost:32620/api/personas");
     }
 
     addUser(user):Observable<any>{
