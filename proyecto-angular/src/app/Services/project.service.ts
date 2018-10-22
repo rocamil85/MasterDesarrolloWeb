@@ -14,7 +14,7 @@ export class ProjectService{
     }
 
 
-    /*getUser():Observable<any>{
+    getUser():Observable<any>{
         return this._http.get(this.url+"api/users/2");
     }
 
@@ -23,8 +23,19 @@ export class ProjectService{
         let headers = new HttpHeaders().set('Content-Type','application/json');
 
         return this._http.post(this.url+"api/users",params,{headers:headers});
+    }
 
-    }*/
+    saveProject(project:Project):Observable<any>{
+       let params = JSON.stringify(project);
+       let headers = new HttpHeaders().set('Content-Type','application/json');
+       
+       return this._http.post(this.url+'save-project',params,{headers:headers});
+    }
 
+    getProjects():Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+        return this._http.get(this.url+'/projects',{headers:headers});
+    }
 
+//----
 }

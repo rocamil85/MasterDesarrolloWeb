@@ -1,6 +1,9 @@
 <div class="container">
   <h2>{{title}}</h2>
-  
+  <div class="message" *ngIf="status">
+        <h3>El proyecto fue creado exitosamente</h3>
+  </div>
+
 <!--Formulario listo para pastelear-->
   <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm">
       <div class="form-group">
@@ -50,18 +53,10 @@
 
         <p>
           <label for="image">Imagen del proyecto</label>
-          <input type="file" placeholder="Subir Imagen">
+          <input type="file" placeholder="Subir Imagen" (change)="fileChangeEvent($event)">
         </p>
 
-<<<<<<< HEAD
-    <p>
-      <label for="image">Imagen del proyecto</label>
-      <input type="file" placeholder="Subir Imagen">
-    </p>
 
-    <input type="submit" value="Enviar" disabled000="{!projectForm.form.valid}" [disabled]="!projectForm.form.valid"/>
-=======
-    <button>Enviar</button>
->>>>>>> 288c1a4b385173a2379ccff5008629d3f350fb2e
+      <button>Enviar</button>
   </form>
 </div>
